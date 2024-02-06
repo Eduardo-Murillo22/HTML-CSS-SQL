@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
+-->
+<html> 
+    <head>
+        <script src="BRDPlay.js"></script>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>Board start</title>
+
+        <style>
+            body {
+                background-image: url("back.jpg");
+                text-align: center;
+                color: white;
+            }
+            div {
+                width: auto;
+                height: auto;
+                display: inline-block;
+            }
+            table {
+                margin-top: 150px;
+                border-collapse: collapse;
+                width: 100%;
+                background-color: green;
+                border-radius: 10px
+            }
+            td, th {
+                color: #333333;
+                text-align: left;
+                padding: 30px;
+                
+            }
+            button{
+                background-color: transparent;
+                border: transparent;
+                cursor: pointer;
+            }
+            .addbutton{
+                text-align: center;
+                color:white;
+                background-color: lightgray;
+                border-radius: 4px;
+                font-size: 20px;
+            }
+            .addbutton:hover{
+                color: black;
+                background-color: lightgreen;
+            }
+            .turnColor{
+                color: crimson;
+            }
+            .optionBox{
+                border-radius: 5px 0px 0px 5px;
+                font-size: 20px;
+                
+            }
+            .buttonSubmit{
+                border-radius: 0px 5px 5px 0px;
+                border: 2px solid green;
+                background-color: green;
+                font-size: 20px;
+                color: white;
+            }
+            .buttonSubmit:hover{
+                background-color: blue;
+                border-color: white;
+            }
+            p{
+                font-size: 15px;
+                font-family: 'Press Start 2P', cursive;
+                color: white;
+            }
+            .botHole{
+                background-size:cover;
+                border-top: 2px solid lightgoldenrodyellow;
+                border-right:  2px solid lightgoldenrodyellow;
+                border-left: 2px solid lightgoldenrodyellow;
+                
+            }
+            .topHole{
+                background-size:cover;
+                border-bottom: 2px solid lightgoldenrodyellow;
+                border-right:  2px solid lightgoldenrodyellow;
+                border-left: 2px solid lightgoldenrodyellow;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        
+
+        <div>
+            <script>
+
+                window.onload = setUp;
+                function setUp(){
+                    
+                    start();
+                    
+                    var p1 = document.getElementById("player1");
+                    var p2 = document.getElementById("player2");
+                    var buttonp1 = document.getElementById("Button_Player1");
+                    var buttonp2 = document.getElementById("Button_Player2");
+
+                    
+                    var y = getCookie("Player-1");
+                    
+                    if (y) {
+                        
+                        p1.innerHTML = y;    
+                    }else{
+                        p1.innerHTML = "Player 1";
+                    }
+                        
+                    var x = getCookie("Player-2");
+                    if (x) {
+                        p2.innerHTML = x;    
+                    }else{
+                        p2.innerHTML = "Player 2";
+                    }
+                    if(y !== null){
+                        
+                        buttonp1.disabled = true;
+                        buttonp1.style.pointerEvents = "none";
+                        buttonp1.innerHTML = 0;
+                        buttonp1.style.color = "black";
+                        buttonp1.style.backgroundColor = "transparent";
+                        
+                    }
+                    if(x !== null){
+                        
+                        buttonp2.disabled = true;
+                        buttonp2.style.pointerEvents = "none";
+                        buttonp2.innerHTML = 0;
+                        buttonp2.style.color = "black";
+                        buttonp2.style.backgroundColor = "transparent";
+
+                    }
+                    
+
+                }
+                function getCookie(name) {
+                    var nameEQ = name + "=";
+                    var ca = document.cookie.split(';');
+                    for (var i = 0; i < ca.length; i++) {
+                        var c = ca[i];
+                        while (c.charAt(0) == ' ')
+                            c = c.substring(1, c.length);
+                        if (c.indexOf(nameEQ) == 0)
+                            return c.substring(nameEQ.length, c.length);
+                    }
+                    return null;
+                }
+                
+                function addPlayer1(){
+                    window.location.href = "LoginPage1.html";
+
+                }
+                function addPlayer2(){
+                    window.location.href = "LoginPage2.html";
+
+                }
+                function PlayableCheck(){
+                    
+                    var player1 = document.getElementById("player1");
+                    var player2 = document.getElementById("player2");
+
+                    if (player1.innerHTML === "Player 1" || player2.innerHTML === "Player 2") {
+                        alert("You must login both players");
+                        location.reload();
+                    }
+
+                    
+                }
+                
+            </script>
+            <table>
+                <tr>
+                    <td style="border-radius: 10px 0px 0px 0px;background-color:rgba(224,174,115,255);font-family: 'Press Start 2P', cursive;border-top-color: transparent;" id="player2"></td>
+                    <td class="topHole" background="TopHole.png" >A<p id="A" class="">4</p></td>
+                    <td class="topHole" background="TopHole.png"  >B<p id="B" class="">4</p></td >
+                    <td class="topHole" background="TopHole.png"  >C<p id="C" class="">4</p></td >
+                    <td class="topHole" background="TopHole.png"  >D<p id="D" class="">4</p></td >
+                    <td class="topHole" background="TopHole.png"  >E<p id="E" class="">4</p></td >
+                    <td class="topHole" background="TopHole.png"  >F<p id="F" class="">4</p></td >
+                    <td style="border-radius: 0px 10px 0px 0px;background-color:rgba(224,174,115,255);border-top-color: transparent;"><button style="font-family: 'Press Start 2P', cursive;" class="addbutton" id="Button_Player1" onclick="addPlayer1()">+</button></td>
+                </tr>
+                <tr>
+                    <td style="border-radius: 0px 0px 0px 10px;background-color:rgba(224,174,115,255);border-bottom-color: transparent;"><button style="font-family: 'Press Start 2P', cursive;" class="addbutton" id="Button_Player2" onclick="addPlayer2()">+</button></td>
+                    <td class="botHole" background="BotHole.png">L<p id="L" class="">4</p></td>
+                    <td class="botHole" background="BotHole.png">K<p id="K" class="">4</p></td>
+                    <td class="botHole" background="BotHole.png">J<p id="J" class="">4</p></td>
+                    <td class="botHole" background="BotHole.png">I<p id="I" class="">4</p></td>
+                    <td class="botHole" background="BotHole.png">H<p id="H" class="">4</p></td>
+                    <td class="botHole" background="BotHole.png">G<p id="G" class="">4</p></td>
+                    <td style="border-radius: 0px 0px 10px 0px;background-color:rgba(224,174,115,255); font-family: 'Press Start 2P', cursive;border-bottom-color: transparent;" id="player1"></td>
+                </tr>
+            </table></br>
+            <input style="font-family: 'Press Start 2P', cursive;"  class="optionBox" type="text" id="option">
+            <button style="font-family: 'Press Start 2P', cursive;" class="buttonSubmit" id="submit" onclick="PlayableCheck()">Submit</button>
+            <h2 style="font-family: 'Press Start 2P', cursive;font-size: 15px;" id="turn"></h2>
+            <a style="color: white;" href="LoginPage1.html">Change Player 1</a>
+            <a style="color: white;" href="LoginPage2.html">Change Player 2</a>
+
+        </div>
+    </body>
+</html>
