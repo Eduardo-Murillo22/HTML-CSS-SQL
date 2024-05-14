@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&display=swap');
+
+:root{
+    --pixel-font: "Jersey 10";
+    --round-font: "Poetsen One";
+    --second-gray: #2a2a2f;
+    --orange-plus: rgb(232, 152, 24);
+}
+
+body{
+    background-color: #1a1a1a;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+.sky{
+    height: 100vh;
+    background-image: url("Images/Sky.jpg");
+    position: relative;
+    overflow: hidden;
+    animation: animateg 70s linear infinite;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container{
+    font-family: var(--round-font);
+    font-size: 20px;
+    color: var(--orange-plus);
+    display: flex;
+    justify-content: center;
+    
+    /* background-color: white; */
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 20px;
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+ul a {
+    text-decoration: none;
+    color: gray;
+}
+
+ul a:hover {
+    color: var(--orange-plus);
+}
+
+nav {
+    font-family: var(--pixel-font);
+    font-size: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 99999999999;
+    background-color: var(--second-gray);
+    width: 100%;
+}
+
+.ProfileImg{
+    border-radius: 1000px;
+    width: 30vh;
+}
+
+.Content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.Content div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+div{
+    margin: 30px;
+}
+
+p{
+    font-family: "Open Sans";
+    font-size: 15px;
+}
+
+.logos{
+    width: 100%;
+}
+
+
+@keyframes animateg{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -1000px 0;
+    }
+}
