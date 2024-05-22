@@ -172,10 +172,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     var player1 = document.getElementById("player1");
                     var player2 = document.getElementById("player2");
 
-                    if (player1.innerHTML === "Player 1" || player2.innerHTML === "Player 2") {
-                        alert("You must login both players");
-                        location.reload();
-                    }
+                    //if (player1.innerHTML === "Player 1" || player2.innerHTML === "Player 2") {
+                    //    alert("You must login both players");
+                    //    location.reload();
+                    //}add Database to use this
 
                     
                 }
@@ -184,16 +184,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             <table>
                 <tr>
                     <td style="border-radius: 10px 0px 0px 0px;background-color:rgba(224,174,115,255);font-family: 'Press Start 2P', cursive;border-top-color: transparent;" id="player2"></td>
-                    <td class="topHole" background="TopHole.png" >A<p id="A" class="">4</p></td>
-                    <td class="topHole" background="TopHole.png"  >B<p id="B" class="">4</p></td >
-                    <td class="topHole" background="TopHole.png"  >C<p id="C" class="">4</p></td >
-                    <td class="topHole" background="TopHole.png"  >D<p id="D" class="">4</p></td >
-                    <td class="topHole" background="TopHole.png"  >E<p id="E" class="">4</p></td >
-                    <td class="topHole" background="TopHole.png"  >F<p id="F" class="">4</p></td >
-                    <td style="border-radius: 0px 10px 0px 0px;background-color:rgba(224,174,115,255);border-top-color: transparent;"><button style="font-family: 'Press Start 2P', cursive;" class="addbutton" id="Button_Player1" onclick="addPlayer1()">+</button></td>
+                    <td class="topHole" background="TopHole.png">A<p id="A" class="">4</p></td>
+                    <td class="topHole" background="TopHole.png">B<p id="B" class="">4</p></td>
+                    <td class="topHole" background="TopHole.png">C<p id="C" class="">4</p></td>
+                    <td class="topHole" background="TopHole.png">D<p id="D" class="">4</p></td>
+                    <td class="topHole" background="TopHole.png">E<p id="E" class="">4</p></td>
+                    <td class="topHole" background="TopHole.png">F<p id="F" class="">4</p></td>
+                    <td style="border-radius: 0px 10px 0px 0px;background-color:rgba(224,174,115,255);border-top-color: transparent;"></button></td>
+                    <!--<td style="border-radius: 0px 10px 0px 0px;background-color:rgba(224,174,115,255);border-top-color: transparent;"><button style="font-family: 'Press Start 2P', cursive;" class="addbutton" id="Button_Player1" onclick="addPlayer1()">+</button></td>-->
+
                 </tr>
                 <tr>
-                    <td style="border-radius: 0px 0px 0px 10px;background-color:rgba(224,174,115,255);border-bottom-color: transparent;"><button style="font-family: 'Press Start 2P', cursive;" class="addbutton" id="Button_Player2" onclick="addPlayer2()">+</button></td>
+                    <td style="border-radius: 0px 0px 0px 10px;background-color:rgba(224,174,115,255);border-bottom-color: transparent;"></button></td>
+                    <!--<td style="border-radius: 0px 0px 0px 10px;background-color:rgba(224,174,115,255);border-bottom-color: transparent;"><button style="font-family: 'Press Start 2P', cursive;" class="addbutton" id="Button_Player2" onclick="addPlayer2()">+</button></td>-->
+
                     <td class="botHole" background="BotHole.png">L<p id="L" class="">4</p></td>
                     <td class="botHole" background="BotHole.png">K<p id="K" class="">4</p></td>
                     <td class="botHole" background="BotHole.png">J<p id="J" class="">4</p></td>
