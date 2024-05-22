@@ -72,22 +72,21 @@
         </div>
     </div>
     <h1 id="Contact" class="container" style="flex-direction: none;">Contact</h1>
-    <div id="Contact" class="content">
-        <div>
+    <div id="Contact" class="">
+        <div class="contact">
             <a href="https://github.com/Eduardo-Murillo22" target="_blank"><img src="Images/github-mark-white.png" alt="Github"></a>
             <a href="https://www.linkedin.com/in/eduardo-murillo-227a042b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank"><img src="Images/In-White-72@2x.png" alt="LinkedIn"></a>            
         </div>
         <div>
-            <h1>Contact</h1>
-            <form action="https://formspree.io/f/xzbnqeao" method="post">
-                <input name="Name" type="text" placeholder="Name">
-                <input name="Email" type="text" placeholder="Email">
-                <input name="Subject" type="text" placeholder="Subject">
-                <textarea name="Message" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                <input type="submit" value="Send">
+            <form class="ContactBox" action="https://formspree.io/f/xzbnqeao" method="post">
+                <h1>Email Me</h1>
+                <input name="Name" type="text" placeholder="Name" required>
+                <input name="Email" type="text" placeholder="Email" required>
+                <input name="Subject" type="text" placeholder="Subject" required>
+                <textarea name="Message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                <input class="submit" type="submit" value="Send">
             </form>
         </div>
     </div>
-
 </body>
 </html>

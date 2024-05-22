@@ -40,7 +40,7 @@ img{
 }
 .container{
     font-family: var(--round-font);
-    font-size: 20px;
+    font-size: 2rem;
     color: var(--orange-plus);
     display: flex;
     justify-content: center;
@@ -67,7 +67,7 @@ ul a:hover {
 
 nav {
     font-family: var(--pixel-font);
-    font-size: 20px;
+    font-size: 1.5rem;
     position: sticky;
     top: 0;
     z-index: 99999999999;
@@ -102,7 +102,7 @@ div{
 
 p{
     font-family: "Open Sans";
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .logos{
@@ -187,12 +187,11 @@ p{
 .projectContainer a {
     color: white;
     font-family: var(--pixel-font);
-    font-size: 160%;
+    font-size: 1.5rem;
     text-decoration: none; /* Removes the underline from the links */
     padding: 5px 10px; /* Adds padding around the links */
     border: 1px solid transparent; /* Creates a border for the links */
     border-radius: 5px; /* Adds rounded corners */
-    transition: background-color 0.3s; /* Smooth background color transition on hover */
 }
 
 .projectContainer .button{
@@ -212,22 +211,64 @@ p{
     margin-top: 10px; /* Adds some space above the links */
 }
 
-input{
-    padding: 10px;
-    margin: 10px;
-    color: white;
-    background-color: red;
-    border-radius: 10px;
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%; /* Adds space between the logos*/
+}
+
+.contact a{
+    border-radius: 100%;
     width: 100px;
 }
 
-form{
+.ContactBox{
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 10px;
     margin: 10px;
-    color: red;
     background-color: var(--second-gray);
-    border-radius: 10px;
+    border-radius: 30px;
+
 }
+
+input{
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+}
+
+.submit{
+    color: white;
+    font-family: var(--pixel-font);
+    font-size: 2rem;
+    text-decoration: none; /* Removes the underline from the links */
+    padding: 5px 10px; /* Adds padding around the links */
+    border: 1px solid transparent; /* Creates a border for the links */
+    border-radius: 5px; /* Adds rounded corners */
+    background-color: var(--orange-plus);
+    border: 2px solid var(--second-gray);
+}
+
+.submit:hover{
+    color: black;
+    background-color: greenyellow;
+}
+
+textarea{
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    margin: 10px;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+
+}
+
 
